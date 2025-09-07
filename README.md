@@ -2,6 +2,8 @@ Customer Churn Predictor
 
 This is Customer Churn Predictor, a project I built to help businesses see if a customer is likely to leave or stay based on a few simple details.
 
+dataset: https://www.kaggle.com/datasets/abdullah0a/telecom-customer-churn-insights-for-analysis
+
 What it does:
 
 You can enter details like age, tenure, monthly charges, and gender, and it instantly tells you if that customer is likely to churn.
