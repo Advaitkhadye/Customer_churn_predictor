@@ -2,17 +2,14 @@ import streamlit as st
 import joblib
 import numpy as np
 
-# Cache model + scaler so they are loaded only once
+# Cache model + scaler together so they are loaded only once
 @st.cache_resource
-def load_scaler():
-    return joblib.load("scaler.pkl")
+def load_artifacts():
+    scaler = joblib.load("scaler.pkl")
+    model = joblib.load("model.pkl")
+    return scaler, model
 
-@st.cache_resource
-def load_model():
-    return joblib.load("model.pkl")
-
-scaler = load_scaler()
-model = load_model()
+scaler, model = load_artifacts()
 
 # App Title
 st.title("Churn Prediction App")
